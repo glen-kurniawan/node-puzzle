@@ -63,3 +63,8 @@ describe '10-word-count', ->
       input = data
       expected = words: 9, lines: 5, characters: 40
       helper input, expected, done
+  
+  it 'should count words starting with space', (done) ->
+    input = ' fun puzzle'
+    expected = words: 2, lines: 1, characters: 11
+    helper input, expected, done
